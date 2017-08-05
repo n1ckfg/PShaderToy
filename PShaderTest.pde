@@ -1,5 +1,5 @@
 void setup() {
-  size(640, 360, P2D);
+  size(960, 540, P2D);
   noStroke();
   ellipseMode(CENTER);
   setupShaders();

@@ -1,13 +1,16 @@
 PShader shader;
-  
+
+PVector shaderMousePos = new PVector(0,0);
+PVector shaderMouseClick = new PVector(0,0);
+
 void setupShaders() {
   shader = loadShader("test.glsl"); 
-  sizeToShader(shader);
+  shaderSetSize(shader);
 }
 
 void updateShaders() {
-  mouseToShader(shader);
-  timeToShader(shader);
+  shaderSetMouse(shader);
+  shaderSetTime(shader);
 }
 
 void drawShaders() {
@@ -21,18 +24,23 @@ void runShaders() {
 
 // ~ ~ ~ ~ ~ ~ ~
 
-void sizeToShader(PShader ps) {
-  ps.set("iResolution", float(width), float(height));
+void shaderSetSize(PShader ps) {
+  ps.set("iResolution", float(width), float(height), 1.0);
 }
 
-void mouseToShader(PShader ps) {
-  float mx = float(mouseX);
-  float my = float(mouseY);
-  float pmx = float(pmouseX);
-  float pmy = float(pmouseY); 
-  ps.set("iMouse", mx, my, pmx, pmy);
+void shaderSetMouse(PShader ps) {
+  if (mousePressed) shaderMousePos = new PVector(mouseX, height - mouseY);
+  ps.set("iMouse", shaderMousePos.x, shaderMousePos.y, shaderMouseClick.x, shaderMouseClick.y);
 }
 
-void timeToShader(PShader ps) {
-  ps.set("iGlobalTime", float(millis()));
+void shaderSetTime(PShader ps) {
+  ps.set("iGlobalTime", float(millis()) / 1000.0);
+}
+
+void shaderMousePressed() {
+  shaderMouseClick = new PVector(mouseX, height - mouseY);
+}
+
+void shaderMouseReleased() {
+  shaderMouseClick = new PVector(-shaderMouseClick.x, -shaderMouseClick.y);
 }
