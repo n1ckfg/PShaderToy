@@ -1,4 +1,4 @@
-void setup() {
+void setup() { 
   size(960, 540, P2D);
   noStroke();
   ellipseMode(CENTER);
