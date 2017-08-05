@@ -5,11 +5,21 @@ void setupShaders() {
   sizeToShader(shader);
 }
 
-void drawShaders() {
+void updateShaders() {
   mouseToShader(shader);
   timeToShader(shader);
+}
+
+void drawShaders() {
   filter(shader);
 }
+
+void runShaders() {
+  updateShaders();
+  drawShaders();
+}
+
+// ~ ~ ~ ~ ~ ~ ~
 
 void sizeToShader(PShader ps) {
   ps.set("iResolution", float(width), float(height));

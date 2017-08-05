@@ -9,5 +9,5 @@ void main() {
 	vec4 col = texture2D(texture, uv);
 	vec2 mouse = iMouse.xy / iResolution.xy;
 
-    gl_FragColor = vec4(mouse, sin(iGlobalTime / 1000.0), 1.0) + col;
+    gl_FragColor = vec4(mouse, 0.5 + (0.5 * sin(iGlobalTime / 1000.0)), 1.0) + col;
 }
