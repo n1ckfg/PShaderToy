@@ -1,9 +1,7 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// See https://www.shadertoy.com/view/4dl3zn
+﻿// See https://www.shadertoy.com/view/4dl3zn
 // GLSL -> HLSL reference: https://msdn.microsoft.com/en-GB/library/windows/apps/dn166865.aspx
 
-Shader "ShaderToy/ Bubbles" {
+Shader "ShaderToy/Bubbles" {
 
 	SubShader {
 
