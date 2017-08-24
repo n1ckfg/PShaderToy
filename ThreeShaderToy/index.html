@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>ThreeShaderToy</title>
+		<link type="text/css" rel="stylesheet" href="./css/main.css"/>
+		<script type="text/javascript" src="./js/libraries/three.min.js"></script>
+		
+		<script id="vertexShader" type="x-shader/x-vertex"> 
+			varying vec2 vUv;
+
+			void main() {
+				vUv = uv;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_Position = projectionMatrix * mvPosition;
+			}
+		</script>
+
+		<script id="fragmentShader" type="x-shader/x-fragment">
+			uniform float time;
+			uniform vec2 resolution; 
+
+			varying vec2 vUv;
+
+			void main(void) {
+				vec2 position = -1.0 + 2.0 * vUv;
+
+				float red = abs( sin( position.x * position.y + time / 5.0 ) );
+				float green = abs( sin( position.x * position.y + time / 4.0 ) );
+				float blue = abs( sin( position.x * position.y + time / 3.0 ) );
+				gl_FragColor = vec4( red, green, blue, 1.0 );
+			}
+		</script>
+		
+		<script type="text/javascript" src="./js/three_core.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
