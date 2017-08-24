@@ -73,7 +73,7 @@ Material:
     - _B3: 0
     - _B4: 0
     - _BlendMode: 0
-    - _Brightness: 0.1
+    - _Brightness: 0.08
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -87,7 +87,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Size: 2.57
+    - _Size: 1.31
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -95,7 +95,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.8161765, g: 0.30542773, b: 0.0660143, a: 1}
-    - _Color2: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
+    - _Color1: {r: 0.63236415, g: 0.5264382, b: 0.78676474, a: 1}
+    - _Color2: {r: 0.85294116, g: 0.8144463, b: 0.2947664, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

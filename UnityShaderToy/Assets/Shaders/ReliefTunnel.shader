@@ -3,6 +3,7 @@
 Shader "ShaderToy/ReliefTunnel" {
 	
 	Properties {
+		_Color("Color", Color) = (1,.5,.5,1)
 		_MainTex("Texture", 2D) = "white" {}
 	}
 
@@ -35,6 +36,7 @@ Shader "ShaderToy/ReliefTunnel" {
 				return o;
 			}
 
+			float4 _Color;
 			sampler2D _MainTex;
 
 			fixed4 frag (v2f i) : SV_Target {
@@ -58,7 +60,7 @@ Shader "ShaderToy/ReliefTunnel" {
 				ao = smoothstep(0.0, 0.4, ao) - smoothstep(0.4, 0.7, ao);
 				ao = 1.0 - 0.5*ao*r;
 
-				return float4(col*w*ao, 1.0);
+				return float4(col*w*ao, 1.0) * _Color;
 			}
 
 			ENDCG

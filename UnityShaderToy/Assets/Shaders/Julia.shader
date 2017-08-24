@@ -3,7 +3,7 @@
 Shader "ShaderToy/Julia" {
 	
 	Properties {
-		//
+		_Color("Color", Color) = (1,.5,.5,1) 
 	}
 
 	SubShader {
@@ -33,6 +33,8 @@ Shader "ShaderToy/Julia" {
 				return o;
 			}
 			
+			float4 _Color;
+
 			fixed4 frag(v2f i) : SV_Target{
 				float2 cc = float2(cos(.25*_Time.y), sin(.25*_Time.y*1.423));
 
@@ -46,7 +48,7 @@ Shader "ShaderToy/Julia" {
 				}
 
 				float color = 1.0 - sqrt(sqrt(dmin))*0.7;
-				return float4(color, color, color, 1.0);
+				return float4(color, color, color, 1.0) * _Color;
 			}
 
 			ENDCG

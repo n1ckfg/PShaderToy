@@ -3,6 +3,7 @@
 Shader "ShaderToy/SquareTunnel" {
 	
 	Properties {
+		_Color("Color", Color) = (1,.5,.5,1)
 		_MainTex("Texture", 2D) = "white" {}
 	}
 
@@ -32,7 +33,8 @@ Shader "ShaderToy/SquareTunnel" {
 				o.uv = v.uv;
 				return o;
 			}
-			
+
+			float4 _Color;
 			sampler2D _MainTex;
 
 			fixed4 frag (v2f i) : SV_Target {
@@ -42,7 +44,7 @@ Shader "ShaderToy/SquareTunnel" {
 
 				float3 col = tex2D(_MainTex, i.uv).xyz;
 
-				return float4(col*r*r*r, 1.0);
+				return float4(col*r*r*r, 1.0) * _Color;
 			}
 
 			ENDCG
