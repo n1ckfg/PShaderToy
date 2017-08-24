@@ -4,7 +4,7 @@ PVector shaderMousePos = new PVector(0,0);
 PVector shaderMouseClick = new PVector(0,0);
 
 void setupShaders() {
-  shader = loadShader("mouse.glsl"); 
+  shader = loadShader("snow.glsl"); 
   shaderSetSize(shader);
 }
 
