@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class ShaderToy : UnityStandardAssets.ImageEffects.ImageEffectBase {
+public class ShaderToyImageEffect : UnityStandardAssets.ImageEffects.ImageEffectBase {
 
     public int horizontalResolution = 320;
     public int verticalResolution = 240;
