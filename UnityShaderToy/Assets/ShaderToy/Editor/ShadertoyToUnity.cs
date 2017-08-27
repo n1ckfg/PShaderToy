@@ -1,4 +1,4 @@
-// https://github.com/Shaderboy/ShaderToyToUnity
+// based on https://github.com/Shaderboy/ShaderToyToUnity
 
 using UnityEngine;
 using UnityEditor;
