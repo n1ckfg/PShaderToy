@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+//https://github.com/Shaderboy/ShaderToyToUnity
+
+using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 using NUnit.Framework;
