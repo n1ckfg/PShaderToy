@@ -21,7 +21,7 @@ void ofManager :: setup() {
     // ~ ~ ~ example ~ ~ ~
 
     checkerboard.loadImage("textures/checkerboard.png");
-    shader1.load("shaderExample");
+    shader1.load("shader");
     
     font1 = setupFont("fonts/verdana.ttf", 30, 34.0, 1.035);
     fbo1 = setupFbo();
@@ -36,7 +36,7 @@ void ofManager :: update() {
     ofBackground(0);
     checkerboard.draw(0,0,ofGetWidth(), ofGetHeight());
 
-    ofSetColor(255); // why does this work?
+    //ofSetColor(255); // why does this work?
     fbo1.end();
 
     fbo2.begin();
@@ -56,7 +56,7 @@ void ofManager :: update() {
 
 void ofManager :: draw() {
     ofBackground(0);
-    fbo2.draw(0,0);
+    fbo1.draw(0,0);
 }
 
 //--------------------------------------------------------------
