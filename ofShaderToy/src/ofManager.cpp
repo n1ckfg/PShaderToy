@@ -34,7 +34,7 @@ void ofManager :: update() {
     ofClear(255,255,255,0);
     
     ofBackground(0);
-    checkerboard.draw(0,0,width,height);
+    checkerboard.draw(0,0,ofGetWidth(), ofGetHeight());
 
     ofSetColor(255); // why does this work?
     fbo1.end();
@@ -78,31 +78,36 @@ bool ofManager :: KeyIsNumber(int key) {
 }
 
 ofTrueTypeFont ofManager :: setupFont(string fileName, int fontSize) {
-    ofTrueTypeFont font.loadFont(fileName, fontSize, true, true);
+	ofTrueTypeFont font;
+	font.loadFont(fileName, fontSize, true, true);
     return font;
 }
 
 ofTrueTypeFont ofManager :: setupFont(string fileName, int fontSize, float letterSpacing, float lineHeight) {
-    ofTrueTypeFont font.loadFont(fileName, fontSize, true, true);
+	ofTrueTypeFont font;
+	font.loadFont(fileName, fontSize, true, true);
     font.setLetterSpacing(letterSpacing);
     font.setLineHeight(lineHeight);
     return font;
 }
 
 ofFbo ofManager :: setupFbo() {
-    ofFbo fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
+	ofFbo fbo;
+	fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     return fbo;
 }
 
 ofPlanePrimitive ofManager :: setupPlane() {
-    ofPlanePrimitive plane.set(ofGetWidth(), ofGetHeight());   // dimensions for width and height in pixels
+	ofPlanePrimitive plane;
+	plane.set(ofGetWidth(), ofGetHeight());   // dimensions for width and height in pixels
     plane.setPosition(ofGetWidth()/2, ofGetHeight()/2, 0); // position in x y z
     plane.setResolution(2, 2); // this resolution (as columns and rows) is enough
     return plane;
 }
 
 ofPlanePrimitive ofManager :: setupPlane(ofTexture tex) {
-    ofPlanePrimitive plane.set(ofGetWidth(), ofGetHeight());   // dimensions for width and height in pixels
+	ofPlanePrimitive plane;
+	plane.set(ofGetWidth(), ofGetHeight());   // dimensions for width and height in pixels
     plane.setPosition(ofGetWidth()/2, ofGetHeight()/2, 0); // position in x y z
     plane.setResolution(2, 2); // this resolution (as columns and rows) is enough
     plane.mapTexCoordsFromTexture(tex); // *** don't forget this ***
