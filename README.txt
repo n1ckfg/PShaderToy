@@ -10,7 +10,12 @@ shader language from GLSL to CGFX, which Unity can use with both OpenGL and
 DirectX. (More complex shaders will require manual correction.)
 
 X3. three.js
-TBD
+TK
 
-X4. Raspberry Pi (oF)
-TBD
+X4. openFrameworks
+TK
+
+X5. Raspberry Pi (oF)
+TK
+
+
