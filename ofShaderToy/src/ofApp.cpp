@@ -2,17 +2,26 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofm.setup();
+	shader1.load("shaders/myShader");
+	fbo1 = ofm.setupFbo();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	ofm.update();
+	fbo1.begin();
+	ofClear(255, 255, 255, 0);
+	shader1.begin();
+	shader1.setUniform1f("iGlobalTime", ofGetElapsedTimef());
+	shader1.setUniform3f("iResolution", ofGetWidth(), ofGetHeight(), 0.0);
+	ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+	shader1.end();
+	fbo1.end();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	ofm.draw();
+	ofBackground(0);
+	fbo1.draw(0,0);
 }
 
 //--------------------------------------------------------------

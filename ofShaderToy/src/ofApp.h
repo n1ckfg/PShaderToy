@@ -23,5 +23,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		ofManager ofm;
+		ofShader shader1;
+		ofFbo fbo1;
 		
 };
