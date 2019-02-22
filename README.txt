@@ -9,13 +9,18 @@ including for VR. Instead, use the included converter script to convert the
 shader language from GLSL to CGFX, which Unity can use with both OpenGL and
 DirectX. (More complex shaders will require manual correction.)
 
-X3. three.js
+3. p5.js
+Setting up a new JavaScript project takes a bit of practice, but once you get
+past that, this approach is the simplest of all.
+
+4. three.js
+The boilerplate for loading shaders in three.js is a lot more complicated than in p5.js, but 
+fortunately the shader code itself is no different.
+ 
+X5. openFrameworks
 TK
 
-X4. openFrameworks
-TK
-
-X5. Raspberry Pi (oF)
+X6. Raspberry Pi (oF)
 TK
 
 
