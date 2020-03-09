@@ -11,7 +11,7 @@
 <i>ShaderToy shaders require intermediate changes.</i> Shaders in oF work a little differently than in the above approaches, and modifying them may require slightly more understanding of what's going on in the code.
 
 ### 5. openFrameworks for Raspberry Pi (oF 0.10.1): RPiShaderToy
-TK
+<i>ShaderToy shaders require intermediate changes.</i> Same as for desktop oF, except you also need to make sure the shaders work with OpenGL ES (mobile). Start with the desktop version if you've never written shaders for oF before.
 
 ### 6. Unity: UnityShaderToy   
 <i>ShaderToy shaders require major changes.</i> Unity is the odd one out among these approaches, because it uses a different shader language--CGFX instead of GLSL. While it's possible to modify ShaderToy's GLSL shaders for direct use in Unity, they'll only work in OpenGL mode; that's impractical for most Windows desktop apps, including for VR. So instead, use the included converter script to convert the shader language from GLSL to CGFX, which Unity can use with both OpenGL and DirectX. (More complex shaders will require additional manual correction.) The good news is, if you can get the hang of this process, Unity offers the friendliest overall approach to shader writing, and also the best documentation.
