@@ -7,10 +7,10 @@
 ### 3. three.js: ThreeShaderToy
 <i>ShaderToy shaders work with minor changes.</i> The process of loading shaders in three.js is unfortunately a little complicated, but it's boilerplate code that doesn't usually change. The shader code itself should work the same as in p5.js&mdash;both are WebGL.
  
-### 4. openFrameworks (oF 10.1): ofShaderToy
+### 4. openFrameworks (oF 0.10.1): ofShaderToy
 <i>ShaderToy shaders require intermediate changes.</i> Shaders in oF work a little differently than in the above approaches, and modifying them may require slightly more understanding of what's going on in the code.
 
-### 5. Raspberry Pi (oF 0.8.4): RPiShaderToy
+### 5. openFrameworks for Raspberry Pi (oF 0.10.1): RPiShaderToy
 TK
 
 ### 6. Unity: UnityShaderToy   
