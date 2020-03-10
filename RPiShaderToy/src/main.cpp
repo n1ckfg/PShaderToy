@@ -2,12 +2,8 @@
 #include "ofApp.h"
 
 int main() {  
-	
-    ofGLESWindowSettings settings;
+    	ofGLESWindowSettings settings;
 	settings.glesVersion = 2;
 	ofCreateWindow(settings);
-    
-    ofSetupOpenGL(1280, 720, OF_FULLSCREEN);
-    ofRunApp(new ofApp());
-    
+    	ofRunApp(new ofApp());
 }

@@ -4,11 +4,7 @@
 // and falling snow of         https://www.shadertoy.com/view/ldsGDn
 //-----------------------------------------------------
 
-#version 150
-
 precision highp float;
-
-out vec4 outputColor;
 
 uniform vec3 iResolution;
 uniform float iGlobalTime;
@@ -133,5 +129,5 @@ void main() {
     
     float snowOut = background(uv) + snowing(uv, gl_FragCoord.xy);
     
-    outputColor = vec4(snowOut*0.9, snowOut, snowOut*1.1, 1.0);
+    gl_FragColor = vec4(snowOut*0.9, snowOut, snowOut*1.1, 1.0);
 }
